@@ -21,7 +21,4 @@ str: inx h
 mov m,a
 inx h
 mov m,c
-
-sub b
-
 hlt
