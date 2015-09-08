@@ -1,7 +1,10 @@
 ;Rahul Sharma
 ;Exchanges nibbles of an 8 bit number
 
-lxi h,0000h
+jmp start
+
+start: lxi h,0000h
+
 mvi b,04h
 mov a,m
 loop: rlc
