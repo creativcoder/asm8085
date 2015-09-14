@@ -6,19 +6,18 @@ jmp start
 ;data
 
 ;code
-start: lxi h,0000h
-mvi b,04h
-outer:  mvi c,04h
+start: mvi b,04h
+outer: mvi c,04h
 lxi h,0000h
 inner: mov a,m
 inx h
 cmp m
 jc skip ; dont exchange if <
-jz skip ;dont exchange if =
-mov d,m
+jz skip ; dont exchange if ==
+mov e,m
 mov m,a
 dcx h
-mov m,d
+mov m,e
 inx h
 skip: dcr c
 jnz inner
