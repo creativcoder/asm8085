@@ -7,17 +7,23 @@ jmp start
 ;data
 
 ;code
-start: mvi d,05h ;range of numbers to generate
-lxi h, 0000h
-mvi a, 00h
-mvi b, 01h
-lp: add b
-;sta 000Ah
+start: lxi h,0000h ;Range of no is taken at this address
+mov d,m
+mvi a,00h
+mvi b,01h
+inx h
+mov m,a
+inx h
+mov m,b
+
+loop: add b
+inx h
+mov m,a
 mov c,a
 mov a,b
 mov b,c
-mov m,a
-inx h
+
 dcr d
-jnz lp
+jnz loop
+
 hlt
