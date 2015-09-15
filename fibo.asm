@@ -1,6 +1,6 @@
 ;Rahul Sharma
 ;This generates fibonacci numbers and stores them
-;on memory locations starting from 0000h
+;on memory locations starting from 0001h
 
 jmp start
 
