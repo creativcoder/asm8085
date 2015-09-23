@@ -10,20 +10,20 @@ jmp start
 start: lxi h,0000h
 mov c,m
 mvi e,00h
-mvi b,00h
+mvi d,00h
 inx h
 loop: mov a,m
 rar
-jc skip
-mov a,m
+jnc skip
+ral
 add e
-jnc incr
-inr b
-incr: mov e,a
+jnc sk
+inr d
+sk: mov e,a
 skip: dcr c
 inx h
 jnz loop
-mov m,b
+mov m,d
 inx h
 mov m,e
 hlt
