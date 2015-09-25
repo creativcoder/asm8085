@@ -22,6 +22,7 @@ mov c,d
 mvi b,00h
 avg: inr b
 sub d
+jc ex
 jz ex
 jnz avg
 ex: mov m,b
