@@ -20,7 +20,6 @@ inx h
 jnz loop
 mov c,d
 mvi b,00h
-mov a,e
 avg: inr b
 sub d
 jz ex
