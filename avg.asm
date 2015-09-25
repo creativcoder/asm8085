@@ -13,7 +13,7 @@ mov d,m
 mvi e,00h
 inx h
 loop: mov a,m
-adc e
+add e
 mov e,a
 dcr c
 inx h
